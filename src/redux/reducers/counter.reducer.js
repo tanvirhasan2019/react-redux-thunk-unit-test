@@ -10,29 +10,28 @@ const counterReducer = (state = INITIAL_STATE, action) => {
         case INCREMENT:
            return {
              ...state, count: state.count + 1,
-           };
+           }
         case DECREMENT:
            return {
               ...state, count: state.count - 1,
-           };
+           }
         case FETCH_FAIL:
            return {
               ...state, error: action.payload.error, loading : false
-           };
+           }
         case FETCH_START:
            return {
               ...state, loading: true,
-           };
+           }
         case FETCH_SUCCESS:
            return {
               ...state, users: action.payload.data, loading : false
-           };
+           }
         case FETCH_END:
            return {
               ...state, loading: false,
-           };
-         default: return state;
+           }
+         default: return state
     }
 };
-
-export default counterReducer;
+export default counterReducer

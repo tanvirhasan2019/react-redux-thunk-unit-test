@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
+import {FETCH_USERS} from "../helper/contansts"
 
 export default function UserList() {
     const [users, setUsers] = React.useState([])
@@ -9,7 +10,7 @@ export default function UserList() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+                const response = await axios.get(FETCH_USERS);
                 setUsers(response.data)
                 setLoading(false)
             } catch(error){
@@ -17,8 +18,8 @@ export default function UserList() {
                 setLoading(false)
             }
         }
-        fetchData();
-    }, []);
+        fetchData()
+    }, [])
 
     return (
         <div>

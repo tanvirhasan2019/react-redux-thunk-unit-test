@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchUsers } from '../../redux/actions/counter.actions'
 export default function FetchData() {
   const dispatch = useDispatch()
-  const data = useSelector(state=>state.count);
+  const data = useSelector(state=>state.count)
   useEffect(()=>{
       dispatch(fetchUsers())
-  }, [])
+  }, [dispatch])
 
   return (
     <div>

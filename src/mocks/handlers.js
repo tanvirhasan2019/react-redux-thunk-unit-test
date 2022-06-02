@@ -1,25 +1,16 @@
 import { rest } from 'msw'
+import { FETCH_USERS, ERROR_TEXT, TEST_USERS } from '../helper/contansts'
 
-const url = 'https://jsonplaceholder.typicode.com/users'
-
-export const fetchUsers_success = rest.get(url, async (req, res, ctx) => {
+export const fetchUsers_success = rest.get(FETCH_USERS, async (req, res, ctx) => {
     return res(
         ctx.status(200),
-        ctx.json([
-            {
-                id: '1',
-                name: 'Finish course',
-                username : "Tanvir hasan"
-            }
-        ])
+        ctx.json(TEST_USERS)
     )
 })
-
-export const fetchUsers_fail = rest.get(url, async (req, res, ctx) => {
+export const fetchUsers_fail = rest.get(FETCH_USERS, async (req, res, ctx) => {
     return res(
         ctx.status(400),
-        ctx.json("something went wrong !!!")
+        ctx.json(ERROR_TEXT)
     )
 })
-
 export const handlers = [fetchUsers_success, fetchUsers_fail]
