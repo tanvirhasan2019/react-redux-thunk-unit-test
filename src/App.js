@@ -17,7 +17,8 @@ const PaperCom = styled(Paper)({
   variant: 'outlined',
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  backgroundColor : '#fafafa'
 });
 
 function App() {
