@@ -29,5 +29,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Deployment
 
-The project was deployed to: [https://6299ddacc88e1551cef5b4cc--frabjous-basbousa-225c17.netlify.app/](https://react-redux-thunk-unit-test)
+The project was deployed to: [react-redux-thunk/unit-test/netlify](https://6299ddacc88e1551cef5b4cc--frabjous-basbousa-225c17.netlify.app/)
 
