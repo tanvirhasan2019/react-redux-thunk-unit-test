@@ -24,7 +24,7 @@ export default function MediaControlCard() {
             />
             <CardContent>
                 <Typography align='center' gutterBottom variant="h5" component="div">
-                    Number :{count}
+                    Count :&nbsp;{count}
                 </Typography>
             </CardContent>
             <CardActions>
@@ -35,10 +35,10 @@ export default function MediaControlCard() {
                     alignItems="center"
                 >
                     <Fab onClick={() => dispatch(increaseCounter())} color="primary" aria-label="add">
-                        <AddIcon />
+                        <h1>+</h1>
                     </Fab>
                     <Fab onClick={() => dispatch(decreaseCounter())} color="secondary" aria-label="add">
-                        <RemoveIcon />
+                        <h1>-</h1>
                     </Fab>
                 </Grid>
             </CardActions>

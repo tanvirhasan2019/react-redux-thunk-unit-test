@@ -6,6 +6,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from "@mui/material/Box"
 import UserList from './components/UserList'
+import StickyFooter from "./components/footer/StickyFooter"
 import FetchData from "./components/ReduxFetchData/FetchData"
 import Header from './components/header/Header'
 import MediaControlCard from "./components/Counter"
@@ -46,6 +47,7 @@ function App() {
           </Grid>
         </Box>
       </Container>
+      <StickyFooter />
     </div>
   )
 }

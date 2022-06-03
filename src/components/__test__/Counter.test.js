@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { screen } from "@testing-library/react";
 import { cleanup } from "@testing-library/react";
 import userEvent from '@testing-library/user-event'
-import App from "./App"
-import configureStore from "./redux/store";
+import Counter from "../Counter"
+import configureStore from "../../redux/store";
 
 const store = configureStore();
 
@@ -14,35 +14,35 @@ describe('counter pages unit-test', () => {
     it("default count", async () => {
 
         render(<Provider store={store}>
-            <App />
+            <Counter />
         </Provider>)
 
-        const div = screen.queryByText("0");
-        expect(div.textContent).toBe("0");
+        expect(await screen.findByText("Count : 0")).toBeInTheDocument();
+
     })
 
     it('increment click event', async () => {
 
         render(<Provider store={store}>
-            <App />
+            <Counter />
         </Provider>)
 
         const div = screen.queryByText("+");
         userEvent.click(div);
         userEvent.click(div);
-        expect(await screen.findByText("2")).toBeInTheDocument();
+        expect(await screen.findByText("Count : 2")).toBeInTheDocument();
     });
 
     it('decrement click event', async () => {
 
         render(<Provider store={store}>
-            <App />
+            <Counter />
         </Provider>)
 
         const div = screen.queryByText("-");
         userEvent.click(div);
         userEvent.click(div);
-        expect(await screen.findByText("0")).toBeInTheDocument();
+        expect(await screen.findByText("Count : 0")).toBeInTheDocument();
     });
 
 })
