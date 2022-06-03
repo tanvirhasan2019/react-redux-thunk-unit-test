@@ -1,6 +1,6 @@
 
-![Counter](C:\Users\Tanshen\Desktop\temp\couter.png)
-![Users api](C:\Users\Tanshen\Desktop\temp\couter2.png)
+![Counter](src/images/counter.png)
+![Users api](src/images/users.png)
 
 ### `npm start`
 
